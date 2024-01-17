@@ -1,3 +1,7 @@
+<script setup>
+import PageHeader from "../components/shared/PageHeader.vue"
+</script>
+
 <template>
-    <h1>Home page</h1>
+    <PageHeader title="Home page" />
 </template>

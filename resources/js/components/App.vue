@@ -1,16 +1,15 @@
+<script setup>
+import NavMenu from "../components/shared/NavMenu.vue"
+</script>
+
 <template>
-    <div class="mx-auto container">
-        <ul class="flex gap-3">
-            <li>
-                <router-link :to="{name: 'home'}">Home</router-link>
-            </li>
-            <li>
-                <router-link :to="{name: 'about'}">About</router-link>
-            </li>
-        </ul>
-        <div>
-            <router-view></router-view>
-        </div>
+    <div>
+        <NavMenu/>
+        <main>
+            <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+                <router-view></router-view>
+            </div>
+        </main>
     </div>
 </template>
 
