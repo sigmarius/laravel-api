@@ -55,6 +55,10 @@ export default function useDesks() {
         }
     }
 
+    const destroyDesk = async (id) => {
+        await axios.delete(`/api/v1/desks/${id}`)
+    }
+
     return {
         isLoading,
         errors,
@@ -62,6 +66,7 @@ export default function useDesks() {
         desks,
         getDesk,
         getDesks,
-        updateDesk
+        updateDesk,
+        destroyDesk
     }
 }
