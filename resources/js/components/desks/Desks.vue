@@ -18,11 +18,18 @@ onMounted(getDesks)
         <li v-for="desk in desks"
             :key="desk.id"
         >
-            <a href="#" class="grid w-full min-w-[7rem] transform cursor-pointer place-items-center rounded-xl border border-blue-gray-50 bg-white px-3 py-2 transition-all hover:scale-105 hover:border-blue-gray-100 hover:bg-blue-gray-50 hover:bg-opacity-25">
-                <div class="min-w-0 flex-auto">
-                    <p class="text-sm font-semibold leading-6 text-gray-900">{{ desk.name }}</p>
+            <router-link
+                :to="{name: 'showDesk', params: {deskId: desk.id}}"
+                class="card bg-base-100 shadow-xl"
+            >
+                <div class="card-body">
+                    <h2 class="card-title">{{ desk.name }}</h2>
+                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
                 </div>
-            </a>
+            </router-link>
         </li>
     </ul>
 
